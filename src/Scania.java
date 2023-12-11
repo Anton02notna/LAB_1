@@ -1,5 +1,5 @@
 import java.awt.*;
-public class Scania extends Cars {
+public class Scania extends Truck {
     private Ramp ramp;
     protected Scania(int x, int y) {
         direction = Directions.NORTH;
@@ -12,7 +12,7 @@ public class Scania extends Cars {
     }
 
 
-    @Override
+
     protected double speedFactor() {
         return 1;
     }

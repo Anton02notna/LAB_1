@@ -1,9 +1,11 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Workshop<T extends Cars> {
+public class Workshop<T extends Vehicle> {
     private List<T> carsInWorkshop;
     private final int maxCapacity;
+
+    protected Container container;
 
     public Workshop(int maxCapacity) {
         this.carsInWorkshop = new ArrayList<>();

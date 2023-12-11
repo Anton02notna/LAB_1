@@ -9,7 +9,7 @@ public class CarController {
     private Timer timer = new Timer(delay, new TimerListener());
 
     CarView frame;
-    ArrayList<Cars> cars = new ArrayList<>();
+    ArrayList<Vehicle> cars = new ArrayList<>();
 
     ArrayList<Saab> saab95s = new ArrayList<>();
     ArrayList<Scania> scanias = new ArrayList<>();
@@ -33,9 +33,10 @@ public class CarController {
         cc.timer.start();
     }
 
+
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            for (Cars car : cars) {
+            for (Vehicle car : cars) {
                 collisionWithWalls(car);
                 car.move();
                 int x = (int) Math.round(car.getX());
@@ -46,7 +47,7 @@ public class CarController {
         }
     }
 
-    private void collisionWithWalls(Cars car) {
+    private void collisionWithWalls(Vehicle car) {
         if (car.getX() > 700) {
             car.x_coordinate = 700;
             car.turnLeft();
@@ -72,7 +73,7 @@ public class CarController {
     // Calls the gas method for each car once
     void gas(int amount) {
         double gas = ((double) amount) / 100;
-        for (Cars car : cars
+        for (Vehicle car : cars
         ) {
             if (engineStatus){
             car.gas(gas);}
@@ -80,20 +81,20 @@ public class CarController {
     }
     void brake(int amount){
         double brake = ((double) amount) / 100;
-        for (Cars car : cars
+        for (Vehicle car : cars
         ) {
             car.brake(brake);
         }
     }
-    void startAllCars () {
-        for (Cars car : cars) {
+    void startAllVehicle () {
+        for (Vehicle car : cars) {
             car.startEngine();
             engineStatus = true;
         }
     }
 
-    void  stopAllCars() {
-        for (Cars car : cars) {
+    void  stopAllVehicle() {
+        for (Vehicle car : cars) {
             car.stopEngine();
             engineStatus = false;
         }

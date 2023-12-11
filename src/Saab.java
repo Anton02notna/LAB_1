@@ -10,6 +10,8 @@ public class Saab extends Cars{
         turboOn = false;
         modelName = "Saab95";
         stopEngine();
+        this.x_coordinate = x;
+        this.y_coordinate = y;
     }
     protected void setTurboOn(){
         turboOn = true;
@@ -21,7 +23,7 @@ public class Saab extends Cars{
 
     }
 
-    @Override
+
     protected double speedFactor(){
         double turbo = 1;
         if(turboOn) turbo = 1.3;

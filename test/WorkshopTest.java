@@ -7,7 +7,7 @@ public class WorkshopTest {
     private Volvo volvo2;
     private Saab saab;
 
-    private Workshop<Cars> workshop;
+    private Workshop<Vehicle> workshop;
     private Workshop<Volvo> workshopVolvo;
 
 

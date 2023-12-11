@@ -105,8 +105,8 @@ public class CarView extends JFrame{
         turboOnButton.addActionListener(e -> carC.setTurboOn());
         turboOffButton.addActionListener(e -> carC.setTurboOff());
 
-        startButton.addActionListener(e -> carC.startAllCars());
-        stopButton.addActionListener(e -> carC.stopAllCars());
+        startButton.addActionListener(e -> carC.startAllVehicle());
+        stopButton.addActionListener(e -> carC.stopAllVehicle());
 
         liftBedButton.addActionListener(e -> carC.raiseAngle());
         lowerBedButton.addActionListener(e -> carC.lowerAngle());

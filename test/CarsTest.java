@@ -5,7 +5,7 @@ import java.awt.*;
 
 import static org.junit.Assert.*;
 
-public class CarsTest {
+public class VehicleTest {
     private Volvo volvo;
     @Before
     public void init() {
@@ -86,12 +86,12 @@ public class CarsTest {
     @Test
     public void testTurnLeft() {
         volvo.turnLeft();
-        assertSame(Cars.Directions.WEST, volvo.getDirection());
+        assertSame(Vehicle.Directions.WEST, volvo.getDirection());
     }
     @Test
     public void testTurnRight() {
         volvo.turnRight();
-        assertEquals(Cars.Directions.EAST, volvo.getDirection());
+        assertEquals(Vehicle.Directions.EAST, volvo.getDirection());
     }
     @Test
     public void testGas() {

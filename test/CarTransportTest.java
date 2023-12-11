@@ -57,10 +57,10 @@ public class CarTransportTest {
 
     }
     @Test
-    public void testGetLoadedCars(){
+    public void testGetLoadedVehicle(){
         carTransport.lowerRamp();
         carTransport.load(volvo);
-        assertEquals(carTransport.carList, carTransport.getLoadedCars());
+        assertEquals(carTransport.carList, carTransport.getLoadedVehicle());
 
     }
     @Test

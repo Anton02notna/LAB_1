@@ -20,11 +20,11 @@ public class DrawPanel extends JPanel {
     Point scaniaPoint = new Point();
 
     private ArrayList<Point> carPoints = new ArrayList<>();
-    private ArrayList<BufferedImage> carImages = new ArrayList<>();
+
 
     Point carPoint = new Point();
 
-    void moveit(Cars car, int x, int y) {
+    void moveit(Vehicle car, int x, int y) {
         if (car instanceof Saab) {
             saabPoint.x = x;
             saabPoint.y = y;
