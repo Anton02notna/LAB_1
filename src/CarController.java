@@ -1,7 +1,11 @@
+import javax.imageio.ImageIO;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class CarController {
     private final int delay = 50;
@@ -46,6 +50,7 @@ public class CarController {
             }
         }
     }
+
 
     private void collisionWithWalls(Vehicle car) {
         if (car.getX() > 700) {
@@ -124,5 +129,16 @@ public class CarController {
             scania.lowerAngle(45);
             }
         }
+
+    public void addComponent(Graphics g, int number){
+
+        if (number==0){
+            g.drawImage(, DrawPanel.carPoint.x, carPoint.y, null);
+        }
     }
+
+
+    }
+
+
 

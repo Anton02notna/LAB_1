@@ -14,6 +14,8 @@ public class DrawPanel extends JPanel {
     BufferedImage scaniaImage;
 
 
+
+
     // To keep track of a single cars position
     Point volvoPoint = new Point();
     Point saabPoint = new Point();
@@ -38,6 +40,8 @@ public class DrawPanel extends JPanel {
 
     }
 
+
+
     public DrawPanel(int x, int y) {
         this.setDoubleBuffered(true);
         this.setPreferredSize(new Dimension(x, y));
@@ -58,13 +62,16 @@ public class DrawPanel extends JPanel {
             scaniaImage = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResource("pics/Scania.jpg")));
             carPoints.add(scaniaPoint);
 
+
         } catch (IOException ex) {
             ex.printStackTrace();
         }
     }
 
+
+
     @Override
-    protected void paintComponent(Graphics g) {
+    public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
         for (int i = 0; i < carPoints.size(); i++) {
