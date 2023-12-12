@@ -130,12 +130,6 @@ public class CarController {
             }
         }
 
-    public void addComponent(Graphics g, int number){
-
-        if (number==0){
-            g.drawImage(, DrawPanel.carPoint.x, carPoint.y, null);
-        }
-    }
 
 
     }
