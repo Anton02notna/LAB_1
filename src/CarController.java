@@ -21,9 +21,10 @@ public class CarController {
     public static void main(String[] args) {
         CarController cc = new CarController();
 
-        Saab saab95 = new Saab(0, 160);
-        Scania scania = new Scania(0, 320);
-        Volvo volvo240 = new Volvo(0, 0);
+        Volvo volvo240 = VehicleFactory.createVolvo(0,0);
+        Saab saab95 = VehicleFactory.createSaab(0,100);
+        Scania scania = VehicleFactory.createScania(0,200);
+
 
         cc.cars.add(volvo240);
         cc.cars.add(saab95);

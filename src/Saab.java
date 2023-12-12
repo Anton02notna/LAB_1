@@ -2,7 +2,7 @@ import java.awt.*;
 
 public class Saab extends Cars{
     protected boolean turboOn;
-    protected Saab(int x, int y){
+    protected Saab(){
         direction = Directions.NORTH;
         nrDoors = 2;
         color = Color.red;
@@ -10,8 +10,7 @@ public class Saab extends Cars{
         turboOn = false;
         modelName = "Saab95";
         stopEngine();
-        this.x_coordinate = x;
-        this.y_coordinate = y;
+
     }
     protected void setTurboOn(){
         turboOn = true;

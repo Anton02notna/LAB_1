@@ -1,7 +1,7 @@
 import java.awt.*;
 public class Scania extends Truck {
     private Ramp ramp;
-    protected Scania(int x, int y) {
+    protected Scania() {
         direction = Directions.NORTH;
         nrDoors = 2;
         color = Color.blue;

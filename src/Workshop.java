@@ -40,8 +40,8 @@ public class Workshop<T extends Vehicle> {
         Workshop<Volvo> volvoWorkshop = new Workshop<>(5);
         Workshop<Saab> saabWorkshop = new Workshop<>(5);
 
-        volvoWorkshop.receiveCar(new Volvo(0,0));
-        saabWorkshop.receiveCar(new Saab(0,0));
+        volvoWorkshop.receiveCar(VehicleFactory.createVolvo(0,0));
+        saabWorkshop.receiveCar(VehicleFactory.createSaab(0,0));
 
         volvoWorkshop.returnCar();
         saabWorkshop.returnCar();
